@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compose Classroom Notes</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Avenir Next", Avenir, sans-serif;
+        color: #172f35;
+        background: #f2f6f3;
+      }
+
+      body { margin: 0; }
+      header { padding: 2rem max(1.25rem, calc((100% - 52rem) / 2)); background: #123d45; color: #fff; }
+      header p { margin: 0 0 .4rem; color: #a9d8ca; font-size: .8rem; font-weight: 700; }
+      h1 { margin: 0; font-size: 2rem; }
+      main { max-width: 52rem; margin: 2rem auto; padding: 0 1.25rem; }
+      form { display: flex; gap: .75rem; align-items: flex-start; }
+      textarea { flex: 1; min-height: 3rem; padding: .8rem; border: 1px solid #aebfba; border-radius: 4px; font: inherit; resize: vertical; }
+      button { padding: .85rem 1rem; border: 0; border-radius: 4px; background: #c94f35; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+      button:disabled { opacity: .6; cursor: wait; }
+      #status { min-height: 1.5rem; color: #8d321f; }
+      ul { display: grid; gap: .7rem; margin: 1.5rem 0; padding: 0; list-style: none; }
+      li { padding: 1rem; border-left: 4px solid #238677; background: #fff; }
+      li p { margin: 0 0 .5rem; overflow-wrap: anywhere; }
+      time { color: #587077; font-size: .85rem; }
+      @media (max-width: 520px) { form { flex-direction: column; } textarea, button { box-sizing: border-box; width: 100%; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>FOUR-SERVICE COMPOSE DEMO</p>
+      <h1>Classroom Notes</h1>
+    </header>
+    <main>
+      <form id="note-form">
+        <textarea id="note-body" maxlength="200" placeholder="Add a note about the lesson" aria-label="Note" required></textarea>
+        <button id="submit-button" type="submit">Add note</button>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <ul id="notes" aria-label="Saved notes"></ul>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>

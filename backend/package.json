@@ -1,0 +1,14 @@
+{
+  "name": "compose-classroom-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small REST API for the Docker Compose classroom demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
